@@ -123,8 +123,8 @@ async function sendSms(phone, message) {
  */
 async function sendWelcomeSms(phone, username) {
   const msg =
-    `Welcome to BETNEXA, Cheers${username} ! ` +
-    `You have successfully signed up. Deposit via M-Pesa to start betting. Good luck and welcome to the site of winners!`;
+    `Welcome to BETNEXA, Cheers ${username} ! ` +
+    `You have successfully signed up. Deposit via M-Pesa to start betting. Login on Https://Betnexa.co.ke.  Good luck and welcome to the site of winners!`;
   return sendSms(phone, msg);
 }
 
@@ -147,7 +147,7 @@ async function sendBetWonSms(phone, betId, amountWon) {
   const msg =
     `Congratulations! Your BETNEXA Bet ${betId} has WON! ` +
     `KSH ${Number(amountWon).toFixed(0)} added to your winnings balance. ` +
-    `Withdraw anytime from your account.`;
+    `Login now on Https://Betnexa.co.ke to withdraw your funds`;
   return sendSms(phone, msg);
 }
 
@@ -158,7 +158,7 @@ async function sendDepositSms(phone, amount, newBalance) {
   const msg =
     `Received a deposit of KSH ${Number(amount).toFixed(0)} on your Betnexa wallet. ` +
     `New balance: KSH ${Number(newBalance).toFixed(0)}. ` +
-    `Place your bets now! on https://Betnexa.vercel.app`;
+    `Place your bets now! on https://Betnexa.co.ke`;
   return sendSms(phone, msg);
 }
 
@@ -192,7 +192,7 @@ async function sendActivationSms(phone, username, amount, newBalance) {
   const msg =
     `Hey ${username}, your BETNEXA account has been activated successfully!` +
     `${depositPart}${balancePart} Withdrawal is now enabled on your account. ` +
-    `You can now withdraw your winnings directly to M-Pesa. Login now: https://Betnexa.vercel.app`;
+    `You can now withdraw your winnings directly to M-Pesa. Login now: https://Betnexa.co.ke`;
   return sendSms(phone, msg);
 }
 
@@ -202,7 +202,7 @@ async function sendActivationSms(phone, username, amount, newBalance) {
 async function sendInactivityReminderSms(phone, username) {
   const msg =
     `Hi ${username}, we miss you at BETNEXA! ` +
-    `Log in now to check today's matches and amazing odds. Big wins await! https://Betnexa.vercel.app`;
+    `Log in now to check today's matches and amazing odds. Big wins await! https://Betnexa.co.ke`;
   return sendSms(phone, msg);
 }
 
